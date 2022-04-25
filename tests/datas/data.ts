@@ -1,0 +1,20 @@
+export let urlD: string = 'https://develop.bit.team/btc_usdt';
+export let urlS: string = 'https://staging.bit.team/btc_usdt';
+export let urlM: string = 'https://spot.bit.team/eth_usdt';
+export let urlAdmDev: string = 'https://manage-test.bit.team';
+export let mailAdmDev: string = 'royihi4866@jasmne.com';
+export let passAdmDev: string = 'qwery123';
+export let mail5: string = ''
+export let mail: string = 'test.trader.three@hotmail.com';
+export let pass: string = 'n33passw0rd';
+export let mail1: string = 'test.trader.four@hotmail.com';
+export let mail2: string = 'mgrechka@crypton.studio';
+export let pass2: string = 'Akfuvfy1';
+export let f100: number = 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111;
+export let supertest: string = 'https://192.168.99.100:8080';
+export let html: string = '<img src="http://сайто-строитель.рф/uploads/banner_sitestroy.gif"/>';
+export let sql: string = 'select table_name as "table":int from information_schema.tables where table_type = "BASE TABLE"'; 
+export let spezsimbols: string = '! " № ; % : ? * ( ) _ + / @ # $ ^ & _ = | \ < > { ] [ ] ` ~'; 
+export let latin: string = 'Akfuvfy';
+export let kirill: string = 'цкацуаый';
+export let big_number: string = '- e ';
