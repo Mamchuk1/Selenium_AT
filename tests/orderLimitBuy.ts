@@ -23,9 +23,6 @@ interface Iprimer {
     await enterP.enterThree(driver);   
     await awaity.market(driver);
     await console.log('enter success');
-      //выбор пары
-      await driver.findElement(By.className("SELECTOR-CHECK-PAIR-btc_usdt")).click();
-      await awaity.market(driver);
 
     //взятие баланса
     let  balancB = await selectors.balancBuy(driver).getText();
@@ -35,7 +32,7 @@ interface Iprimer {
     //перевод строк в числа
         //перевод balancB
         balancB = balancB.slice(0,-4);
-        let balancBStr = balancB.я
+        let balancBStr = balancB.replace(/[\s.]/g, '');
         balancBStr = balancBStr.replace(/\,/g, '.');
         let balancBstr:number = +balancBStr;
        
@@ -46,7 +43,9 @@ interface Iprimer {
         let balancSstr:number = +balancSStr;
        
 
-  
+    //выбор пары
+    await driver.findElement(By.className("SELECTOR-CHECK-PAIR-btc_usdt")).click();
+    await awaity.market(driver);
 
 
     //ввод 1

@@ -47,7 +47,7 @@ var awaity = require('./datas/awaity');
 var enterP = require('./enter');
 (function name() {
     return __awaiter(this, void 0, void 0, function () {
-        var driver, balancB, balancS, balancBStr, balancBstr, balancSStr, balancSstr, price, get, balancBAfterB_1, balancBAfterBStr_1, balancSAfterB_1, balancSAfterBStr_1, balancBAfterBstr, balancSAfterBstr, t, arrayData, i, min, max, price_1, get_1, totalB, balancBAfterB, balancBAfterBStr, balancSAfterB, balancSAfterBStr, price_decimal, get_decimal, balancBAfterB_decimal, balancBAfterBStr_decimal, balancSAfterB_decimal, balancSAfterBStr_decimal;
+        var driver, balancB, balancS, balancBStr, balancBstr, balancSStr, balancSstr, price, get, balancBAfterS_1, balancBAfterSStr_1, balancSAfterS_1, balancSAfterSStr_1, balancBAfterSstr, balancSAfterSstr, t, arrayData, i, min, max, price_1, get_1, totalB, balancBAfterS_2, balancBAfterSStr_2, balancSAfterS_2, balancSAfterSStr_2, price_decimal, get_decimal, balancBAfterS, balancBAfterSStr, balancSAfterS, balancSAfterSStr;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -88,7 +88,7 @@ var enterP = require('./enter');
                     _a.sent();
                     price = 1;
                     get = 1;
-                    return [4 /*yield*/, selectors.trade_buy(driver, price, get)];
+                    return [4 /*yield*/, selectors.trade_sell(driver, price, get)];
                 case 8:
                     _a.sent(); //торговля
                     return [4 /*yield*/, driver.sleep(5000)];
@@ -96,18 +96,18 @@ var enterP = require('./enter');
                     _a.sent();
                     return [4 /*yield*/, selectors.balancBuy(driver).getText()];
                 case 10:
-                    balancBAfterB_1 = _a.sent();
-                    balancBAfterB_1 = balancBAfterB_1.slice(0, -4);
-                    balancBAfterBStr_1 = balancBAfterB_1.replace(/[\s.]/g, '');
-                    balancBAfterBStr_1 = balancBAfterBStr_1.replace(/\,/g, '.');
-                    balancBAfterB_1 = +balancBAfterB_1;
+                    balancBAfterS_1 = _a.sent();
+                    balancBAfterS_1 = balancBAfterS_1.slice(0, -4);
+                    balancBAfterSStr_1 = balancBAfterS_1.replace(/[\s.]/g, '');
+                    balancBAfterSStr_1 = balancBAfterSStr_1.replace(/\,/g, '.');
+                    balancBAfterS_1 = +balancBAfterS_1;
                     return [4 /*yield*/, selectors.balancSell(driver).getText()];
                 case 11:
-                    balancSAfterB_1 = _a.sent();
-                    balancSAfterB_1 = balancSAfterB_1.slice(0, -4);
-                    balancSAfterBStr_1 = balancSAfterB_1.replace(/[\s.]/g, '');
-                    balancSAfterBStr_1 = balancSAfterBStr_1.replace(/\,/g, '.');
-                    balancSAfterB_1 = +balancSAfterB_1;
+                    balancSAfterS_1 = _a.sent();
+                    balancSAfterS_1 = balancSAfterS_1.slice(0, -4);
+                    balancSAfterSStr_1 = balancSAfterS_1.replace(/[\s.]/g, '');
+                    balancSAfterSStr_1 = balancSAfterSStr_1.replace(/\,/g, '.');
+                    balancSAfterS_1 = +balancSAfterS_1;
                     t = 2;
                     arrayData = [];
                     i = 0;
@@ -123,10 +123,10 @@ var enterP = require('./enter');
                 case 13:
                     _a.sent();
                     if (!(balancBstr > totalB)) return [3 /*break*/, 19];
-                    return [4 /*yield*/, console.log('trade_buy posible')];
+                    return [4 /*yield*/, console.log('trade_sell posible')];
                 case 14:
                     _a.sent();
-                    return [4 /*yield*/, selectors.trade_buy(driver, price_1, get_1)];
+                    return [4 /*yield*/, selectors.trade_sell(driver, price_1, get_1)];
                 case 15:
                     _a.sent(); //торговля
                     return [4 /*yield*/, driver.sleep(5000)];
@@ -134,18 +134,18 @@ var enterP = require('./enter');
                     _a.sent();
                     return [4 /*yield*/, selectors.balancBuy(driver).getText()];
                 case 17:
-                    balancBAfterB = _a.sent();
-                    balancBAfterB = balancBAfterB.slice(0, -4);
-                    balancBAfterBStr = balancBAfterB.replace(/[\s.]/g, '');
-                    balancBAfterBStr = balancBAfterBStr.replace(/\,/g, '.');
-                    balancBAfterBstr = +balancBAfterBStr;
+                    balancBAfterS_2 = _a.sent();
+                    balancBAfterS_2 = balancBAfterS_2.slice(0, -4);
+                    balancBAfterSStr_2 = balancBAfterS_2.replace(/[\s.]/g, '');
+                    balancBAfterSStr_2 = balancBAfterSStr_2.replace(/\,/g, '.');
+                    balancBAfterSstr = +balancBAfterSStr_2;
                     return [4 /*yield*/, selectors.balancSell(driver).getText()];
                 case 18:
-                    balancSAfterB = _a.sent();
-                    balancSAfterB = balancSAfterB.slice(0, -4);
-                    balancSAfterBStr = balancSAfterB.replace(/[\s.]/g, '');
-                    balancSAfterBStr = balancSAfterBStr.replace(/\,/g, '.');
-                    balancSAfterBstr = +balancSAfterBStr;
+                    balancSAfterS_2 = _a.sent();
+                    balancSAfterS_2 = balancSAfterS_2.slice(0, -4);
+                    balancSAfterSStr_2 = balancSAfterS_2.replace(/[\s.]/g, '');
+                    balancSAfterSStr_2 = balancSAfterSStr_2.replace(/\,/g, '.');
+                    balancSAfterSstr = +balancSAfterSStr_2;
                     return [3 /*break*/, 21];
                 case 19:
                     if (!(balancBStr < totalB)) return [3 /*break*/, 21];
@@ -159,26 +159,23 @@ var enterP = require('./enter');
                 case 22:
                     price_decimal = 0.00000001;
                     get_decimal = 0.00000001;
-                    return [4 /*yield*/, selectors.trade_buy(driver, price_decimal, get_decimal)];
+                    return [4 /*yield*/, selectors.trade_sell(driver, price_decimal, get_decimal)];
                 case 23:
                     _a.sent(); //торговля
-                    return [4 /*yield*/, driver.sleep(5000)];
-                case 24:
-                    _a.sent();
                     return [4 /*yield*/, selectors.balancBuy(driver).getText()];
-                case 25:
-                    balancBAfterB_decimal = _a.sent();
-                    balancBAfterB_decimal = balancBAfterB_decimal.slice(0, -4);
-                    balancBAfterBStr_decimal = balancBAfterB_decimal.replace(/[\s.]/g, '');
-                    balancBAfterBStr_decimal = balancBAfterBStr_decimal.replace(/\,/g, '.');
-                    balancBAfterB_decimal = +balancBAfterB_decimal;
+                case 24:
+                    balancBAfterS = _a.sent();
+                    balancBAfterS = balancBAfterS.slice(0, -4);
+                    balancBAfterSStr = balancBAfterS.replace(/[\s.]/g, '');
+                    balancBAfterSStr = balancBAfterSStr.replace(/\,/g, '.');
+                    balancBAfterSstr = +balancBAfterSStr;
                     return [4 /*yield*/, selectors.balancSell(driver).getText()];
-                case 26:
-                    balancSAfterB_decimal = _a.sent();
-                    balancSAfterB_decimal = balancSAfterB_decimal.slice(0, -4);
-                    balancSAfterBStr_decimal = balancSAfterB_decimal.replace(/[\s.]/g, '');
-                    balancSAfterBStr_decimal = balancSAfterBStr_decimal.replace(/\,/g, '.');
-                    balancSAfterB_decimal = +balancSAfterB_decimal;
+                case 25:
+                    balancSAfterS = _a.sent();
+                    balancSAfterS = balancSAfterS.slice(0, -4);
+                    balancSAfterSStr = balancSAfterS.replace(/[\s.]/g, '');
+                    balancSAfterSStr = balancSAfterSStr.replace(/\,/g, '.');
+                    balancSAfterSstr = +balancSAfterSStr;
                     // логи
                     console.log();
                     return [2 /*return*/];
